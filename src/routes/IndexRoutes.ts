@@ -1,16 +1,18 @@
 import { Router } from 'express';
 
-class IndexRoutes{
+import indexController  from '../controllers/IndexController';
 
-    public router:Router = Router();
+class IndexRoutes {
 
-    constructor (){
+    public router: Router = Router();
+
+    constructor() {
         this.config();
     }
-    config(): void{
-        this.router.get('/',(req,res) => res.send("Hello"));
+    config(): void {
+        this.router.get('/', indexController.index);
     }
 }
 
-const indexRoutes =  new IndexRoutes();
+const indexRoutes = new IndexRoutes();
 export default indexRoutes.router;

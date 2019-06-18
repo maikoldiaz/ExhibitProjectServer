@@ -14,7 +14,8 @@
   "dependencies": {
     "cors": "^2.8.5",
     "morgan": "^1.9.1",
-    "promise-mysql": "^3.3.2"
+    "promise-mysql": "^3.3.2",
+    "typescript": "^3.5.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.5",

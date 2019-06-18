@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import projectController from '../controllers/ProjectController'
 
 class ProjectsRoutes {
 
@@ -8,7 +9,11 @@ class ProjectsRoutes {
         this.config();
     }
     config(): void {
-        this.router.get('/', (req, res) => res.send("Hello exhibitProjects"));
+        this.router.get('/', projectController.getAll);
+        this.router.get('/:id', projectController.getId);
+        this.router.post('/', projectController.create);
+        this.router.put('/:id', projectController.update);
+        this.router.delete('/:id', projectController.delete);
     }
 }
 
